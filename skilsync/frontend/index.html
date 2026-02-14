@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SkillSync Users</title>
+</head>
+<body>
+    <h1>SkillSync Users</h1>
+    
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="addUser()">Add User</button>
+    
+    <p id="message"></p>
+    
+    <button onclick="loadUsers()">Load Users</button>
+    <ul id="userList"></ul>
+
+    <script>
+        const baseURL = "http://127.0.0.1:8000";
+
+        async function addUser() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            try {
+                const res = await fetch(`${baseURL}/add-user?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`, {
+                    method: 'POST'
+                });
+                const data = await res.json();
+                document.getElementById("message").innerText = data.message;
+                loadUsers();
+            } catch (err) {
+                document.getElementById("message").innerText = "Error connecting to backend";
+            }
+        }
+
+        async function loadUsers() {
+            const userList = document.getElementById("userList");
+            userList.innerHTML = "";
+
+            try {
+                const res = await fetch(`${baseURL}/users`);
+                const data = await res.json();
+                data.users.forEach(u => {
+                    const li = document.createElement("li");
+                    li.innerText = `${u[1]} | ${u[2]} | Created: ${u[3]}`;
+                    userList.appendChild(li);
+                });
+            } catch (err) {
+                document.getElementById("message").innerText = "Error loading users";
+            }
+        }
+    </script>
+</body>
+</html>
