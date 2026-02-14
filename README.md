@@ -1,29 +1,26 @@
-SkillSync AI
-🧾 Basic Details
+<p align="center">
+  <img src="./img.png" alt="Project Banner" width="100%">
+</p>
 
-Team Name: SkillSync
+# SkillSync AI 🎯
 
-👥 Team Members
+## Basic Details
 
-Arya Nanda — BTech Student
 
-🌐 Hosted Project Link
+### Team Members
+- Arya Nanda S M
+### Hosted Project Link
+(http://localhost:5173/)
+http://127.0.0.1:3000/
 
-(If not hosted yet, you can write:)
-
-Currently running locally.
-Frontend → http://localhost:5173
-
-Backend → http://127.0.0.1:3000
-
-📌 Project Description
+### Project Description
+Project Description
 
 SkillSync is an intelligent skill gap analyzer that compares a user's existing skills with required skills for a target job role and generates a learning roadmap.
 
 It helps students and job seekers understand what skills they need to acquire for specific career paths.
 
-❗ Problem Statement
-
+### The Problem statement
 Many students don't know:
 
 What skills are required for a job role
@@ -33,9 +30,7 @@ Which skills they are missing
 How to plan learning roadmap
 
 There is no simple tool that compares current skills vs required industry skills.
-
-✅ Solution
-
+### The Solution
 SkillSync solves this by:
 
 Taking target job role as input
@@ -47,9 +42,13 @@ Comparing with industry skill database
 Showing missing skills instantly
 
 Generating roadmap guidance
+---
 
-🛠 Technical Details
-💻 Technologies Used
+## Technical Details
+
+### Technologies/Components Used
+
+Technologies Used
 Software
 
 Languages
@@ -85,62 +84,58 @@ Git
 GitHub
 
 Postman (optional)
+---
 
-⭐ Features
+## Features
 
-✅ Skill Gap Analysis
+Skill Gap Analysis
 ✅ Roadmap Generation
 ✅ Role-Based Skill Mapping
 ✅ Modern UI (Glassmorphism Design)
 ✅ Fast API Backend
 ✅ Local Database (No external API needed)
+---
 
-⚙️ Implementation
-📥 Installation
-Backend Setup
+## Implementation
+
+### For Software:
+
+#### Installation
+```bash
 cd skillsync-backend
 pip install fastapi uvicorn pydantic
 
-Run Backend
+```
+
+#### Run
+```bash
 uvicorn main:app --host 127.0.0.1 --port 3000
-
-
-Backend runs at:
-
 http://127.0.0.1:3000/docs
 
-Frontend Setup
+```
 
-Open new terminal:
+### For Hardware:
 
-cd skillsync-ai
-npm install
-npm run dev
+#### Components Required
+[List all components needed with specifications]
+
+#### Circuit Setup
+[Explain how to set up the circuit]
+
+---
+
+## Project Documentation
+
+### For Software:
+
+#### Screenshots (Add at least 3)
+<img width="974" height="700" alt="image" src="https://github.com/user-attachments/assets/11fd6c27-c8bd-41c4-a09a-ddeb3a4c60cc" />
 
 
-Frontend runs at:
+#### Diagrams
 
-http://localhost:5173
+**System Architecture:**
 
-🖼 Screenshots
-<img width="949" height="806" alt="image" src="https://github.com/user-attachments/assets/09e04f9b-d5f0-4c66-be7f-37b8fea3d2c4" />
-
-(Add your screenshots later)
-SkillSync AI – Interface Description
-
-This screen is the main interface of the SkillSync AI application, designed to help users analyze skill gaps for specific job roles.
-
-Users can enter a target job role (for example, Frontend Developer) and add their existing skills using the input field and “Add Skill” button. The added skills appear as skill tags below the input area.
-
-Once the user clicks Generate Roadmap, the system analyzes the entered skills against the required skills for that role and generates a roadmap showing required and missing skills.
-
-The interface uses a modern dark glass-style design with gradient background, making it clean, minimal, and user-friendly.
-Example:
-
-![Home Screen](img.png)
-Skill input and role selection screen
-
-🏗 System Architecture
 Flow
 
 React Frontend
@@ -153,47 +148,69 @@ Skill Database Lookup
 ⬇
 Response → Frontend
 
-🔄 Application Workflow
-
-1️⃣ User enters target job role
+**Application Workflow:**
+User enters target job role
 2️⃣ User enters current skills
 3️⃣ Frontend sends request to backend
 4️⃣ Backend checks skill database
 5️⃣ Missing skills returned
 6️⃣ Roadmap displayed
+---
 
-📡 API Documentation
-Base URL
-http://127.0.0.1:3000
 
-GET /
+---
 
-Check server status
+## Additional Documentation
+(http://127.0.0.1:3000)
 
-Response:
+#### API Documentation
 
-{
+**Base URL:** `{
  "message": "SkillSync Backend Running"
 }
 
-POST /ai-analyze
-Request
+
+##### Endpoints
+
+**GET /api/endpoint**
+- **Description:** [What it does]
+- **Parameters:**
+  - `param1` (string): [Description]
+  - `param2` (integer): [Description]
+- **Response:**
+```json
 {
- "role": "frontend developer",
- "skills": ["html", "css"]
+  "status": "success",
+  "data": {}
 }
+```
 
-Response
+**POST /api/endpoint**
+- **Description:** [What it does]
+- **Request Body:**
+```json
 {
- "required_skills": ["html","css","javascript","react","git","api"],
- "missing_skills": ["javascript","react","git","api"]
+  "field1": "value1",
+  "field2": "value2"
 }
+```
+- **Response:**
+```json
+{
+  "status": "success",
+  "message": "Operation completed"
+}
+```
 
-🎥 Demo
+[Add more endpoints as needed...]
 
-(Add later if needed)
+---
 
-🤖 AI Tools Used
+
+
+
+
+## AI Tools Used (Optional - For Transparency Bonus)
 
 Tool Used: ChatGPT
 
@@ -220,35 +237,16 @@ Git setup
 
 Deployment setup
 
-👨‍💻 Team Contributions
 
-Arya Nanda:
 
-Frontend Development
+*
 
-Backend Development
-
-API Integration
-
-GitHub Setup
-
-Testing
-
-Documentation
-
-📜 License
+## License
 
 MIT License
 
-❤️ Made at TinkerHub Hackathon
-⭐ Future Scope
 
-Resume Upload Skill Extraction
 
-Real AI Skill Suggestions
+---
 
-Job Market Integration
-
-Learning Resource Recommendations
-
-Progress Tracking Dashboard
+Made with ❤️ at TinkerHub
