@@ -19,7 +19,7 @@ export default function SkillSyncFrontend() {
   try {
     setLoading(true);
 
-    const res = await fetch("http://127.0.0.1:3000/ai-analyze", {
+    const res = await fetch("http://127.0.0.1:8000/analyze", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
