@@ -1,420 +1,254 @@
-<p align="center">
-  <img src="./img.png" alt="Project Banner" width="100%">
-</p>
+SkillSync AI
+🧾 Basic Details
 
-# [Project Name] 🎯
+Team Name: SkillSync
 
-## Basic Details
+👥 Team Members
 
-### Team Name: [Name]
+Arya Nanda — BTech Student
 
-### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+🌐 Hosted Project Link
 
-### Hosted Project Link
-[mention your project hosted link here]
+(If not hosted yet, you can write:)
 
-### Project Description
-[2-3 lines about what your project does]
+Currently running locally.
+Frontend → http://localhost:5173
 
-### The Problem statement
-[What problem are you solving?]
+Backend → http://127.0.0.1:3000
 
-### The Solution
-[How are you solving it?]
+📌 Project Description
 
----
+SkillSync is an intelligent skill gap analyzer that compares a user's existing skills with required skills for a target job role and generates a learning roadmap.
 
-## Technical Details
+It helps students and job seekers understand what skills they need to acquire for specific career paths.
 
-### Technologies/Components Used
+❗ Problem Statement
 
-**For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+Many students don't know:
 
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+What skills are required for a job role
 
----
+Which skills they are missing
 
-## Features
+How to plan learning roadmap
 
-List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+There is no simple tool that compares current skills vs required industry skills.
 
----
+✅ Solution
 
-## Implementation
+SkillSync solves this by:
 
-### For Software:
+Taking target job role as input
 
-#### Installation
-```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
-```
+Taking user's current skills
 
-#### Run
-```bash
-[Run commands - e.g., npm start, python app.py]
-```
+Comparing with industry skill database
 
-### For Hardware:
+Showing missing skills instantly
 
-#### Components Required
-[List all components needed with specifications]
+Generating roadmap guidance
 
-#### Circuit Setup
-[Explain how to set up the circuit]
+🛠 Technical Details
+💻 Technologies Used
+Software
 
----
+Languages
 
-## Project Documentation
+JavaScript
 
-### For Software:
+Python
 
-#### Screenshots (Add at least 3)
+HTML
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+CSS
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+Frameworks
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+React
 
-#### Diagrams
+FastAPI
 
-**System Architecture:**
+Libraries
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+Pydantic
 
-**Application Workflow:**
+Fetch API
 
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+CORS Middleware
 
----
+Tools
 
-### For Hardware:
+VS Code
 
-#### Schematic & Circuit
+Git
 
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
+GitHub
 
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
+Postman (optional)
 
-#### Build Photos
+⭐ Features
 
-![Team](Add photo of your team here)
+✅ Skill Gap Analysis
+✅ Roadmap Generation
+✅ Role-Based Skill Mapping
+✅ Modern UI (Glassmorphism Design)
+✅ Fast API Backend
+✅ Local Database (No external API needed)
 
-![Components](Add photo of your components here)
-*List out all components shown*
+⚙️ Implementation
+📥 Installation
+Backend Setup
+cd skillsync-backend
+pip install fastapi uvicorn pydantic
 
-![Build](Add photos of build process here)
-*Explain the build steps*
+Run Backend
+uvicorn main:app --host 127.0.0.1 --port 3000
 
-![Final](Add photo of final product here)
-*Explain the final build*
 
----
+Backend runs at:
 
-## Additional Documentation
+http://127.0.0.1:3000/docs
 
-### For Web Projects with Backend:
+Frontend Setup
 
-#### API Documentation
+Open new terminal:
 
-**Base URL:** `https://api.yourproject.com`
+cd skillsync-ai
+npm install
+npm run dev
 
-##### Endpoints
 
-**GET /api/endpoint**
-- **Description:** [What it does]
-- **Parameters:**
-  - `param1` (string): [Description]
-  - `param2` (integer): [Description]
-- **Response:**
-```json
+Frontend runs at:
+
+http://localhost:5173
+
+🖼 Screenshots
+<img width="949" height="806" alt="image" src="https://github.com/user-attachments/assets/09e04f9b-d5f0-4c66-be7f-37b8fea3d2c4" />
+
+(Add your screenshots later)
+SkillSync AI – Interface Description
+
+This screen is the main interface of the SkillSync AI application, designed to help users analyze skill gaps for specific job roles.
+
+Users can enter a target job role (for example, Frontend Developer) and add their existing skills using the input field and “Add Skill” button. The added skills appear as skill tags below the input area.
+
+Once the user clicks Generate Roadmap, the system analyzes the entered skills against the required skills for that role and generates a roadmap showing required and missing skills.
+
+The interface uses a modern dark glass-style design with gradient background, making it clean, minimal, and user-friendly.
+Example:
+
+![Home Screen](img.png)
+Skill input and role selection screen
+
+🏗 System Architecture
+Flow
+
+React Frontend
+⬇
+Fetch API Call
+⬇
+FastAPI Backend
+⬇
+Skill Database Lookup
+⬇
+Response → Frontend
+
+🔄 Application Workflow
+
+1️⃣ User enters target job role
+2️⃣ User enters current skills
+3️⃣ Frontend sends request to backend
+4️⃣ Backend checks skill database
+5️⃣ Missing skills returned
+6️⃣ Roadmap displayed
+
+📡 API Documentation
+Base URL
+http://127.0.0.1:3000
+
+GET /
+
+Check server status
+
+Response:
+
 {
-  "status": "success",
-  "data": {}
+ "message": "SkillSync Backend Running"
 }
-```
 
-**POST /api/endpoint**
-- **Description:** [What it does]
-- **Request Body:**
-```json
+POST /ai-analyze
+Request
 {
-  "field1": "value1",
-  "field2": "value2"
+ "role": "frontend developer",
+ "skills": ["html", "css"]
 }
-```
-- **Response:**
-```json
+
+Response
 {
-  "status": "success",
-  "message": "Operation completed"
+ "required_skills": ["html","css","javascript","react","git","api"],
+ "missing_skills": ["javascript","react","git","api"]
 }
-```
-
-[Add more endpoints as needed...]
 
----
-
-### For Mobile Apps:
+🎥 Demo
 
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
-
-#### Installation Guide
-
-**For Android (APK):**
-1. Download the APK from [Release Link]
-2. Enable "Install from Unknown Sources" in your device settings:
-   - Go to Settings > Security
-   - Enable "Unknown Sources"
-3. Open the downloaded APK file
-4. Follow the installation prompts
-5. Open the app and enjoy!
+(Add later if needed)
 
-**For iOS (IPA) - TestFlight:**
-1. Download TestFlight from the App Store
-2. Open this TestFlight link: [Your TestFlight Link]
-3. Click "Install" or "Accept"
-4. Wait for the app to install
-5. Open the app from your home screen
+🤖 AI Tools Used
 
-**Building from Source:**
-```bash
-# For Android
-flutter build apk
-# or
-./gradlew assembleDebug
+Tool Used: ChatGPT
 
-# For iOS
-flutter build ios
-# or
-xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
-```
+Purpose:
 
----
-
-### For Hardware Projects:
+Debugging help
 
-#### Bill of Materials (BOM)
-
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
-
-**Total Estimated Cost:** ₹[Amount]
-
-#### Assembly Instructions
-
-**Step 1: Prepare Components**
-1. Gather all components listed in the BOM
-2. Check component specifications
-3. Prepare your workspace
-![Step 1](images/assembly-step1.jpg)
-*Caption: All components laid out*
-
-**Step 2: Build the Power Supply**
-1. Connect the power rails on the breadboard
-2. Connect Arduino 5V to breadboard positive rail
-3. Connect Arduino GND to breadboard negative rail
-![Step 2](images/assembly-step2.jpg)
-*Caption: Power connections completed*
-
-**Step 3: Add Components**
-1. Place LEDs on breadboard
-2. Connect resistors in series with LEDs
-3. Connect LED cathodes to GND
-4. Connect LED anodes to Arduino digital pins (2-6)
-![Step 3](images/assembly-step3.jpg)
-*Caption: LED circuit assembled*
-
-**Step 4: [Continue for all steps...]**
-
-**Final Assembly:**
-![Final Build](images/final-build.jpg)
-*Caption: Completed project ready for testing*
-
----
-
-### For Scripts/CLI Tools:
-
-#### Command Reference
-
-**Basic Usage:**
-```bash
-python script.py [options] [arguments]
-```
-
-**Available Commands:**
-- `command1 [args]` - Description of what command1 does
-- `command2 [args]` - Description of what command2 does
-- `command3 [args]` - Description of what command3 does
-
-**Options:**
-- `-h, --help` - Show help message and exit
-- `-v, --verbose` - Enable verbose output
-- `-o, --output FILE` - Specify output file path
-- `-c, --config FILE` - Specify configuration file
-- `--version` - Show version information
-
-**Examples:**
-
-```bash
-# Example 1: Basic usage
-python script.py input.txt
-
-# Example 2: With verbose output
-python script.py -v input.txt
-
-# Example 3: Specify output file
-python script.py -o output.txt input.txt
-
-# Example 4: Using configuration
-python script.py -c config.json --verbose input.txt
-```
-
-#### Demo Output
+Code structuring
 
-**Example 1: Basic Processing**
-
-**Input:**
-```
-This is a sample input file
-with multiple lines of text
-for demonstration purposes
-```
+README writing
 
-**Command:**
-```bash
-python script.py sample.txt
-```
+UI suggestions
 
-**Output:**
-```
-Processing: sample.txt
-Lines processed: 3
-Characters counted: 86
-Status: Success
-Output saved to: output.txt
-```
+Approx AI Code: ~30–40%
+Human Work:
 
-**Example 2: Advanced Usage**
+Full architecture
 
-**Input:**
-```json
-{
-  "name": "test",
-  "value": 123
-}
-```
+Integration
 
-**Command:**
-```bash
-python script.py -v --format json data.json
-```
+Debugging
 
-**Output:**
-```
-[VERBOSE] Loading configuration...
-[VERBOSE] Parsing JSON input...
-[VERBOSE] Processing data...
-{
-  "status": "success",
-  "processed": true,
-  "result": {
-    "name": "test",
-    "value": 123,
-    "timestamp": "2024-02-07T10:30:00"
-  }
-}
-[VERBOSE] Operation completed in 0.23s
-```
+Git setup
 
----
+Deployment setup
 
-## Project Demo
+👨‍💻 Team Contributions
 
-### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
+Arya Nanda:
 
-*Explain what the video demonstrates - key features, user flow, technical highlights*
+Frontend Development
 
-### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
+Backend Development
 
----
+API Integration
 
-## AI Tools Used (Optional - For Transparency Bonus)
+GitHub Setup
 
-If you used AI tools during development, document them here for transparency:
+Testing
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+Documentation
 
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+📜 License
 
-**Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
-- "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
+MIT License
 
-**Percentage of AI-generated code:** [Approximately X%]
+❤️ Made at TinkerHub Hackathon
+⭐ Future Scope
 
-**Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
-- Integration and testing
-- UI/UX design decisions
+Resume Upload Skill Extraction
 
-*Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
+Real AI Skill Suggestions
 
----
+Job Market Integration
 
-## Team Contributions
+Learning Resource Recommendations
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
-
----
-
-## License
-
-This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
-
-**Common License Options:**
-- MIT License (Permissive, widely used)
-- Apache 2.0 (Permissive with patent grant)
-- GPL v3 (Copyleft, requires derivative works to be open source)
-
----
-
-Made with ❤️ at TinkerHub
+Progress Tracking Dashboard
